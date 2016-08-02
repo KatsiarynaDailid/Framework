@@ -1,0 +1,11 @@
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Core\bin\Debug\Core.dll
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Core\bin\Debug\Core.pdb
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Core\bin\Debug\WebDriver.dll
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Core\bin\Debug\WebDriver.xml
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Core\obj\Debug\Core.dll
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Core\obj\Debug\Core.pdb
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Core\bin\Debug\NLog.dll
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Core\bin\Debug\NLog.xml
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Core\bin\Debug\WebDriver.Support.dll
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Core\bin\Debug\WebDriver.Support.xml
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Core\bin\Debug\Core.dll.config
