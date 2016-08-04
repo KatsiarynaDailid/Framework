@@ -11,7 +11,8 @@ namespace TestsForFramework
         LogoutPageSteps logoutPage = new LogoutPageSteps();
         LoginPageSteps loginPage = new LoginPageSteps();
         MainPageSteps mainPage = new MainPageSteps();
-
+        SettingPageSteps settPage = new SettingPageSteps();
+        ForwardPageSteps forwardPage = new ForwardPageSteps();
 
         [SetUp]
         public void BeforeTest()
@@ -26,9 +27,9 @@ namespace TestsForFramework
         {
             string path = TestContext.CurrentContext.TestDirectory;
 
-            SettingPageSteps settPage = new SettingPageSteps();
-            SettingPageSteps sett = new SettingPageSteps();
-            ForwardPageSteps forwardPage = new ForwardPageSteps();
+           
+         //   SettingPageSteps sett = new SettingPageSteps();
+           
             FormOfForwardPageSteps formPage = new FormOfForwardPageSteps();
             LetterPageSteps letter = new LetterPageSteps();
             MailBoxPageSteps mess = new MailBoxPageSteps();
