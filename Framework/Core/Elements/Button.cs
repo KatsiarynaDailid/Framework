@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Core.Log;
 using System.Threading.Tasks;
 
 namespace Core.Elements
@@ -16,6 +17,7 @@ namespace Core.Elements
 
         public void Click()
         {
+           logHandler.LogToFile("Click!");
             this.WrappedElement.Click();
         }
     }

@@ -83,11 +83,9 @@
     <Compile Include="Steps\SpamPageSteps.cs" />
     <Compile Include="Steps\StarredPageSteps.cs" />
     <Compile Include="Steps\ThemesPageSteps.cs" />
-    <Compile Include="Tests\GmailTests.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

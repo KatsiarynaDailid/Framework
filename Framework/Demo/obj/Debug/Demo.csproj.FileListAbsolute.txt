@@ -12,8 +12,6 @@ C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\obj\Debug\Demo.pdb
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\Demo.exe.config
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\WebDriver.Support.dll
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\WebDriver.Support.xml
-C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\nunit.framework.dll
-C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\nunit.framework.xml
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\log4net.dll

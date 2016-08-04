@@ -19,3 +19,7 @@ C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\TestsForFramework\obj\De
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\TestsForFramework\bin\Debug\TestsForFramework.dll.config
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\TestsForFramework\bin\Debug\log4net.dll
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\TestsForFramework\bin\Debug\log4net.xml
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\TestsForFramework\obj\Debug\TestsForFramework.Data.resources
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\TestsForFramework\obj\Debug\TestsForFramework.csproj.GenerateResource.Cache
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\TestsForFramework\bin\Debug\1.txt
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\TestsForFramework\bin\Debug\001_1.zip

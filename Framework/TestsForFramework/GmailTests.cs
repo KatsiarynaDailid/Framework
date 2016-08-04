@@ -1,9 +1,5 @@
 ﻿using Framework.Steps;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using Framework;
 
@@ -28,59 +24,53 @@ namespace TestsForFramework
         public void CheckTheSpam()
         {
             IpHandler hand = new IpHandler();
-
-          //  LoginPageSteps loginPage = new LoginPageSteps();
-            //      loginPage.LogIn();
-            loginPage.Authorize("user1.tat13@gmail.com", "257646667");
-
             MailBoxPageSteps mailPage = new MailBoxPageSteps();
-            mailPage.WriteMessage("user2.tat13@gmail.com", "for spam1", "Spam.123" + hand.GetIp());
-          //  LogoutPageSteps logout = new LogoutPageSteps();
+            SpamPageSteps spamPage = new SpamPageSteps();
+
+            loginPage.Authorize(Data.user1, Data.password);
+            mailPage.WriteMessage(Data.user2, "for spam1", "Spam.123" + hand.GetIp(Data.ip));
             logoutPage.CommonExit();
-            loginPage.Authorize("user2.tat13@gmail.com", "257646667");
-         //   MainPageSteps mainPage = new MainPageSteps();
+            loginPage.Authorize(Data.user2, Data.password);
             mainPage.AddToSpam();
             logoutPage.CommonExit();
-            loginPage.Authorize("user1.tat13@gmail.com", "257646667");
-            mailPage.WriteMessage("user2.tat13@gmail.com", "for spam2", "Spam.456");
+            loginPage.Authorize(Data.user1, Data.password);
+            mailPage.WriteMessage(Data.user2, "for spam2", "Spam.456");
             logoutPage.CommonExit();
-            loginPage.Authorize("user2.tat13@gmail.com", "257646667");
+            loginPage.Authorize(Data.user2, Data.password);
             mainPage.GoToSpam();
-            SpamPageSteps spamPage = new SpamPageSteps();
             spamPage.CheckSpam();
             Assert.AreEqual("for spam2", spamPage.topic);
-         //   logout.CommonExit();
-
         }
-//
-     //   [Ignore("dd")]
+
+        [Ignore("dd")]
         [Test]
         [STAThreadAttribute]
         public void CheckForwardingOfMessages()
         {
-           // LoginPageSteps loginPage = new LoginPageSteps();
-          //  LogoutPageSteps logoutPage = new LogoutPageSteps();
+            string path = TestContext.CurrentContext.TestDirectory;
+
             SettingPageSteps settPage = new SettingPageSteps();
-          //  MainPageSteps mainPage = new MainPageSteps();
             SettingPageSteps sett = new SettingPageSteps();
             ForwardPageSteps forwardPage = new ForwardPageSteps();
             FormOfForwardPageSteps formPage = new FormOfForwardPageSteps();
+            LetterPageSteps letter = new LetterPageSteps();
+            MailBoxPageSteps mess = new MailBoxPageSteps();
+            BinPageSteps binPage = new BinPageSteps();
 
-            //     loginPage.LogIn();
-            loginPage.Authorize("user2.tat13@gmail.com", "257646667");
+            loginPage.Authorize(Data.user2, Data.password);
 
             mainPage.GoToSettings();
             settPage.GoToForward();
-            forwardPage.SetForward("user3.tat13@gmail.com");
+            forwardPage.SetForward(Data.user3);
 
             logoutPage.CommonExit();
-            loginPage.Authorize("user3.tat13@gmail.com", "257646667");
+            loginPage.Authorize(Data.user3, Data.password);
             mainPage.OpenLetter();
-            LetterPageSteps letter = new LetterPageSteps();
+
             letter.GoByLinkToConfirm();
             logoutPage.CommonExit();
 
-            loginPage.Authorize("user2.tat13@gmail.com", "257646667");
+            loginPage.Authorize(Data.user2, Data.password);
             mainPage.GoToSettings();
             settPage.GoToForward();
             forwardPage.CreateFilter();
@@ -88,35 +78,35 @@ namespace TestsForFramework
             settPage.GoToForward();
 
             forwardPage.AddFilter();
-            formPage.ConfirmForward("user1.tat13@gmail.com");
+            formPage.ConfirmForward(Data.user1);
 
             logoutPage.CommonExit();
-            loginPage.Authorize("user1.tat13@gmail.com", "257646667");
+            loginPage.Authorize(Data.user1, Data.password);
 
-            MailBoxPageSteps mess = new MailBoxPageSteps();
-            mess.WriteMessageWithAttach("user2.tat13@gmail.com", "With attach", "attach", @"C:\Users\Katsiaryna_Dailid\Documents\1.txt");
-            mess.WriteMessage("user2.tat13@gmail.com", "Without attach", "There is no attachment here.");
+
+            mess.WriteMessageWithAttach(Data.user2, "With attach", "attach", path + Data.txtFile);
+            mess.WriteMessage(Data.user2, "Without attach", "There is no attachment here.");
             logoutPage.CommonExit();
-            loginPage.Authorize("user2.tat13@gmail.com", "257646667");
+            loginPage.Authorize(Data.user2, Data.password);
             Assert.True(mainPage.CheckUserInInbox());
             Assert.False(mainPage.CheckLabel());
 
             mainPage.GoToBin();
-            BinPageSteps binPage = new BinPageSteps();
+
             Assert.True(binPage.CheckLabelInBin());
             Assert.True(binPage.CheckUserInBin());
 
             logoutPage.CommonExit();
-            loginPage.Authorize("user3.tat13@gmail.com", "257646667");
+            loginPage.Authorize(Data.user3, Data.password);
             Assert.True(mainPage.CheckUserInInbox());
             Assert.False(mainPage.CheckLabel());
             //************
             logoutPage.CommonExit();
-            loginPage.Authorize("user2.tat13@gmail.com", "257646667");
+            loginPage.Authorize(Data.user2, Data.password);
             mainPage.GoToSettings();
             settPage.GoToForward();
             forwardPage.RemoveFilter();
-           // logoutPage.CommonExit();
+
             //***********
 
 
@@ -129,10 +119,10 @@ namespace TestsForFramework
             MailBoxPageSteps mailPage = new MailBoxPageSteps();
             SpamPageSteps spamPage = new SpamPageSteps();
 
-            loginPage.Authorize("user1.tat13@gmail.com", "257646667");
-            mailPage.WriteMessage("user2.tat13@gmail.com", "for spam", "Spam");
+            loginPage.Authorize(Data.user1, Data.password);
+            mailPage.WriteMessage(Data.user2, "for spam", "Spam");
             logoutPage.CommonExit();
-            loginPage.Authorize("user2.tat13@gmail.com", "257646667");
+            loginPage.Authorize(Data.user2, Data.password);
             mainPage.AddToSpam();
             mainPage.GoToSpam();
             spamPage.DeleteFromSpam();
@@ -147,9 +137,9 @@ namespace TestsForFramework
         {
             MailBoxPageSteps mess = new MailBoxPageSteps();
             ErrorSteps errPage = new ErrorSteps();
-
-            loginPage.Authorize("user1.tat13@gmail.com", "257646667");
-            mess.WriteMessageWithAttach("user2.tat13@gmail.com", "With attach", "attach", @"C:\Users\Katsiaryna_Dailid\Downloads\001_1.zip");
+            string path = TestContext.CurrentContext.TestDirectory;
+            loginPage.Authorize(Data.user1, Data.password);
+            mess.WriteMessageWithAttach(Data.user2, "With attach", "attach",path+Data.bigFile);
             Assert.True(errPage.ThereIsAnErrorMessage());
             //*************************
             errPage.CloseErrorMessage();
@@ -160,15 +150,16 @@ namespace TestsForFramework
         [Test]
         [STAThreadAttribute]
         public void ErrorWhileTryingToAttachFileWithNotImageExtension()
-        {                   
+        {
+            string path = TestContext.CurrentContext.TestDirectory;
             ThemesPageSteps themePage = new ThemesPageSteps();
             SettingPageSteps settPage = new SettingPageSteps();
 
-            loginPage.Authorize("user1.tat13@gmail.com", "257646667");
+            loginPage.Authorize(Data.user1, Data.password);
             mainPage.GoToSettings();
             settPage.GoToThemesPage();
             themePage.SetTheme();
-            themePage.AddFileToThemes(@"C:\Users\Katsiaryna_Dailid\Downloads\001_1.zip");
+            themePage.AddFileToThemes(path+Data.notImgFile);
             Assert.True(themePage.WrongExtensionError());
             //****************
             themePage.CloseWindows();
@@ -182,10 +173,10 @@ namespace TestsForFramework
             MailBoxPageSteps mailPage = new MailBoxPageSteps();
             LetterPageSteps letterPage = new LetterPageSteps();
 
-            loginPage.Authorize("user3.tat13@gmail.com", "257646667");
-            mailPage.AddEmoticons("user2.tat13@gmail.com", "emoticons", "Hi!");
+            loginPage.Authorize(Data.user3, Data.password);
+            mailPage.AddEmoticons(Data.user2, "emoticons", "Hi!");
             logoutPage.CommonExit();
-            loginPage.Authorize("user2.tat13@gmail.com", "257646667");
+            loginPage.Authorize(Data.user2, Data.password);
             mainPage.OpenLetter();
             Assert.True(letterPage.ConfirmEmoticons());
         }
@@ -197,10 +188,10 @@ namespace TestsForFramework
             MailBoxPageSteps mailPage = new MailBoxPageSteps();
             StarredPageSteps starredPage = new StarredPageSteps();
       
-            loginPage.Authorize("user2.tat13@gmail.com", "257646667");
-            mailPage.WriteMessage("user3.tat13@gmail.com", "For starred", "XO");
+            loginPage.Authorize(Data.user2, Data.password);
+            mailPage.WriteMessage(Data.user3, "For starred", "XO");
             logoutPage.CommonExit();
-            loginPage.Authorize("user3.tat13@gmail.com", "257646667");
+            loginPage.Authorize(Data.user3, Data.password);
             Assert.True(mainPage.CheckIfItIsStarred());
             mainPage.GoToStarred();
             Assert.True(starredPage.CheckIfItIsStarredPage("https://mail.google.com/mail/u/0/#starred"));
@@ -213,13 +204,13 @@ namespace TestsForFramework
         public void AfterTest()
         {
             //logoutPage.CommonExit();
-            //loginPage.Authorize("user1.tat13@gmail.com", "257646667");
+            //loginPage.Authorize(Data.user1, Data.password);
             //mainPage.CleanUpAllLettersAfterTest();
             //logoutPage.CommonExit();
-            //loginPage.Authorize("user2.tat13@gmail.com", "257646667");
+            //loginPage.Authorize(Data.user2, Data.password);
             //mainPage.CleanUpAllLettersAfterTest();
             //logoutPage.CommonExit();
-            //loginPage.Authorize("user3.tat13@gmail.com", "257646667");
+            //loginPage.Authorize(Data.user3, Data.password);
             //mainPage.CleanUpAllLettersAfterTest();
             loginPage.Close();   
         }

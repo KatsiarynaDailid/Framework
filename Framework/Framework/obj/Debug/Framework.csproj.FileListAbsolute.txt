@@ -1,4 +1,3 @@
-C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Framework\bin\Debug\Framework.dll.config
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Framework\bin\Debug\Framework.dll
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Framework\bin\Debug\Framework.pdb
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Framework\bin\Debug\Core.dll
