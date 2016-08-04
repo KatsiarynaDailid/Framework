@@ -16,3 +16,5 @@ C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\Newtonsof
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\log4net.dll
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\log4net.xml
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\obj\Debug\Demo.D.resources
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\obj\Debug\Demo.csproj.GenerateResource.Cache

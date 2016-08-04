@@ -79,11 +79,11 @@ namespace TestsForFramework
             Assert.True(mainPage.CheckUserInInbox());
             Assert.False(mainPage.CheckLabel());
             //************
-            logoutPage.CommonExit();
-            loginPage.Authorize(Data.user2, Data.password);
-            mainPage.GoToSettings();
-            settPage.GoToForward();
-            forwardPage.RemoveFilter();
+            //logoutPage.CommonExit();
+            //loginPage.Authorize(Data.user2, Data.password);
+            //mainPage.GoToSettings();
+            //settPage.GoToForward();
+            //forwardPage.RemoveFilter();
 
             //***********
 

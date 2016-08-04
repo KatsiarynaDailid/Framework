@@ -48,6 +48,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="D.Designer.cs">
+      <DependentUpon>D.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -60,6 +65,12 @@
       <Project>{0f1ac82c-3cc7-4418-8301-450ccc9d2091}</Project>
       <Name>Framework</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="D.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>D.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

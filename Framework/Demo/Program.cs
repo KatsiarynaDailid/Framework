@@ -24,19 +24,17 @@ namespace Demo
             StarredPageSteps starredPage = new StarredPageSteps();
             SpamPageSteps spamPage = new SpamPageSteps();
 
-
-       //     loginPage.LogIn();
-            loginPage.Authorize("user1.tat13@gmail.com", "257646667");
-            mailPage.WriteMessage("user2.tat13@gmail.com", "for spam", "Spam");
+            //MailBoxPageSteps mailPage = new MailBoxPageSteps();
+            //StarredPageSteps starredPage = new StarredPageSteps();
+            loginPage.Open();
+            loginPage.Authorize(D.user2, D.password);
+            mailPage.WriteMessage(D.user3, "For starred", "XO");
             logoutPage.CommonExit();
-            loginPage.Authorize("user2.tat13@gmail.com", "257646667");
-            mainPage.AddToSpam();   
-            mainPage.GoToSpam();        
-            spamPage.DeleteFromSpam();
-            Console.WriteLine(mainPage.CheckTopicInInbox("for spam"));    
-            logoutPage.CommonExit();
-            Console.WriteLine();
-            Console.WriteLine("end");
+            loginPage.Authorize(D.user3, D.password);
+            Console.WriteLine(mainPage.CheckIfItIsStarred());
+            mainPage.GoToStarred();
+            Console.WriteLine(starredPage.CheckIfItIsStarredPage("https://mail.google.com/mail/u/0/#starred"));
+            Console.WriteLine(starredPage.CheckTheTopic("For starred"));
             Console.ReadLine();
         }
     }
