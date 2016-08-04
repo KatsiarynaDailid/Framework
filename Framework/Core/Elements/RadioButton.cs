@@ -16,7 +16,7 @@ namespace Core.Elements
         public RadioButton(By by) : base(by)
         { }
 
-        public RadioButton(By by, string name) : base(by)
+        public RadioButton(By by, string name) : base(by, name)
         { }
         public void Click()
         {          

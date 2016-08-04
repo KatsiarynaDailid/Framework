@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Framework.Pages;
+using System.Threading;
 
 namespace Framework.Steps
 {
@@ -15,6 +16,7 @@ namespace Framework.Steps
         {                      
             letterPage.btLink.Click();
             letterPage.SwitchToLast();
+            Thread.Sleep(1000);
             letterPage.btConfirm.Click();
             letterPage.SwitchToFirst();
         }

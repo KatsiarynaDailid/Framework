@@ -17,7 +17,7 @@ namespace Core.Elements
         { }
 
 
-        public CheckBox(By by, string name) : base(by)
+        public CheckBox(By by, string name) : base(by, name)
         { }
 
         public void Check()

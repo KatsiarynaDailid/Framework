@@ -16,7 +16,7 @@ namespace Core.Elements
         public TextArea(By by) : base(by)
         { }
 
-        public TextArea(By by, string name) : base(by)
+        public TextArea(By by, string name) : base(by, name)
         { }
 
         public void SetText(String str)

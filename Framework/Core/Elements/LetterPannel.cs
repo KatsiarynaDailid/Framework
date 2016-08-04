@@ -14,7 +14,7 @@ namespace Core.Elements
         public LetterPannel(By by) : base(by)
         { }
 
-        public LetterPannel(By by, string name) : base(by)
+        public LetterPannel(By by, string name) : base(by, name)
         { }
 
         public int Count()

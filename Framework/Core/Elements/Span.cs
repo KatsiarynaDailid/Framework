@@ -14,7 +14,7 @@ namespace Core.Elements
         public Span(By by) : base(by)
         { }
 
-        public Span(By by, string name) : base(by)
+        public Span(By by, string name) : base(by, name)
         { }
 
         public string GetText()

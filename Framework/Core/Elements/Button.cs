@@ -16,7 +16,7 @@ namespace Core.Elements
         { }
 
 
-        public Button(By by, string name) : base(by)
+        public Button(By by, string name) : base(by,name)
         { }
 
         public void Click()
