@@ -42,7 +42,7 @@ namespace TestsForFramework
             Assert.AreEqual("for spam2", spamPage.topic);
         }
 
-        [Ignore("dd")]
+    //    [Ignore("dd")]
         [Test]
         [STAThreadAttribute]
         public void CheckForwardingOfMessages()
