@@ -3,11 +3,9 @@ C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\Demo.pdb
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\Framework.dll
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\Core.dll
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\WebDriver.dll
-C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\NLog.dll
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\Framework.pdb
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\Core.pdb
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\WebDriver.xml
-C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\NLog.xml
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\obj\Debug\Demo.csprojResolveAssemblyReference.cache
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\obj\Debug\Demo.exe
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\obj\Debug\Demo.pdb
@@ -18,3 +16,5 @@ C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\nunit.fra
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\nunit.framework.xml
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\log4net.dll
+C:\Users\Katsiaryna_Dailid\Documents\projects\Framework\Demo\bin\Debug\log4net.xml

@@ -22,7 +22,7 @@ namespace Framework.Steps
             //MainPage mainP = new MainPage();
             //mainP.GoToSettings();   
             //SettingsPage settingsPage = new SettingsPage(SETTING_PAGE);
-            //settingsPage.OpenPage();
+            //settingsPage.OpenDriver();
             settingsPage.btForward.Click();
 
         }
@@ -36,7 +36,7 @@ namespace Framework.Steps
             // can`t press button "themes"
             //mainPage.btThemes.Click();
            // ThemesPage themesPage = new ThemesPage(THEMES_PAGE);
-            //themesPage.OpenPage();
+            //themesPage.OpenDriver();
         }
         //public void SetForward(String email)
         //{
@@ -52,7 +52,7 @@ namespace Framework.Steps
         //    forwardPage.CreateFilter();
         //    Thread.Sleep(4000);
         //    SettingPage settingsPage = new SettingPage(SETTING_PAGE);
-        //    settingsPage.OpenPage();
+        //    settingsPage.OpenDriver();
         //    settingsPage.btForward.Click();
 
         //    forwardPage.btFilter.Click();

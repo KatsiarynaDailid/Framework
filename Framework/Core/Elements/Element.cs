@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using Core.Driver;
 using Core.Extensions;
+using System.Collections.ObjectModel;
 
 namespace Core
 {
@@ -22,6 +23,11 @@ namespace Core
         public IWebElement WrappedElement
         {
             get { return Driver.Driver.DriverInstance().FindElement(this.by, 10); }
+        }
+
+        public ReadOnlyCollection<IWebElement> WrappedElements
+        {
+            get { return Driver.Driver.DriverInstance().FindElements(this.by); }
         }
 
         public bool Display()

@@ -12,24 +12,46 @@ namespace Core.Extensions
     {
         public static IWebElement FindElement(this IWebDriver driver, By by, int timeoutInSeconds)
         {
-           // var elementsList = driver.FindElements(by);
+            var elementsList = driver.FindElements(by);
             try
             {
                 if (timeoutInSeconds > 0)
                 {
-                    //foreach (IWebElement elem in elementsList)
-                    // {
-                        //if (elem.Displayed) {
-                            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutInSeconds));
-                            return wait.Until(ExpectedConditions.ElementIsVisible(by));
-                       // }
-                    //}
-                   
+                    foreach (IWebElement elem in elementsList)
+                    {
+                        if (elem.Displayed)
+                        {
+                            return elem;//driver.FindElement(by);
+                }
+            }
+                    var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutInSeconds));
+                    return wait.Until(ExpectedConditions.ElementIsVisible(by));
                 }
                 return driver.FindElement(by);
             }
             catch (TimeoutException ex) { return null; }
           
+        }
+
+        public static IWebElement FindElements(this IWebDriver driver, By by, int timeoutInSeconds)
+        {
+            //var elementsList = driver.FindElements(by);
+
+            if (timeoutInSeconds > 0)
+            {
+                //foreach (IWebElement elem in elementsList)
+                //{
+                //    if (elem.Displayed)
+                //    {
+                        var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutInSeconds));
+                        return wait.Until(ExpectedConditions.ElementIsVisible(by));
+                    }
+            //    }
+
+            //}
+            return driver.FindElement(by);
+
+
         }
 
 

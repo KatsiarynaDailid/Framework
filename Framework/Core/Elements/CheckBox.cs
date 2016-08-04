@@ -15,10 +15,18 @@ namespace Core.Elements
         public CheckBox(By by) : base(by)
         { }
 
-        public void Check()
+        public void Check(/*out bool exist */)
         {
-            this.WrappedElement.Click();
-        }
+            //try
+            //{
+            //    exist = true
+            
+                this.WrappedElement.Click();
+                
+
+            //}
+            //catch (Exception ex) { exist = false; }
+            }
 
     }
 }

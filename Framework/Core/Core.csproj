@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
       <HintPath>..\packages\NLog.4.3.5\lib\net45\NLog.dll</HintPath>
       <Private>True</Private>
@@ -58,13 +62,13 @@
     <Compile Include="Elements\CheckBox.cs" />
     <Compile Include="Elements\Element.cs" />
     <Compile Include="AbstractPage.cs" />
-    <Compile Include="BaseTest.cs" />
     <Compile Include="Driver\BrowsersDriverSettings\ChromeDriverSettings.cs" />
     <Compile Include="Driver\BrowsersDriverSettings\IEDriverSettings.cs" />
     <Compile Include="Driver\BrowsersDriverSettings\OperaDriverSettings.cs" />
     <Compile Include="Driver\BrowsersDriverSettings\FireFoxDriverSettings.cs" />
     <Compile Include="Driver\CreationOfDriver.cs" />
     <Compile Include="Driver\Driver.cs" />
+    <Compile Include="Elements\LetterPannel.cs" />
     <Compile Include="Elements\Link.cs" />
     <Compile Include="Elements\RadioButton.cs" />
     <Compile Include="Elements\Span.cs" />
@@ -73,11 +77,9 @@
     <Compile Include="Extensions\WebDriverExtensions.cs" />
     <Compile Include="Log\logHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Waiters.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="log.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

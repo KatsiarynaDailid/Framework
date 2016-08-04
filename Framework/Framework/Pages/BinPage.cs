@@ -26,6 +26,15 @@ namespace Framework.Pages
                 return new Button(By.XPath("//*[@aria-label='Not important']"));
             }
         }
+
+        public Button btDeleteForever
+        {
+            get
+            {
+                return new Button(By.XPath("//div[contains(text(),'Delete forever')]"));
+            }
+        }
+
         public BinPage() : base()
         { }
 

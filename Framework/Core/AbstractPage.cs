@@ -12,17 +12,22 @@ namespace Core
     {
        public string url { get; set; }
 
+        public void OpenDriver()
+        {
+            Driver.Driver.CreateWebDriver();
+            Driver.Driver.DriverInstance().Navigate().GoToUrl(url);
+            //driver = WebDriver.GetWebDriver();
+            //driver.Navigate().GoToUrl(Url);      
+        }
+      
+        public void CloseDriver()
+        {
+            Driver.Driver.DriverInstance().Close();
+        }
+
         public void OpenPage()
         {
             Driver.Driver.DriverInstance().Navigate().GoToUrl(url);
-       
-        }
-
-        
-
-        public void ClosePage()
-        {
-            Driver.Driver.DriverInstance().Quit();
         }
 
         public void SwitchToFirst()

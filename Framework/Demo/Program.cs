@@ -25,7 +25,7 @@ namespace Demo
             SpamPageSteps spamPage = new SpamPageSteps();
 
 
-            loginPage.LogIn();
+       //     loginPage.LogIn();
             loginPage.Authorize("user1.tat13@gmail.com", "257646667");
             mailPage.WriteMessage("user2.tat13@gmail.com", "for spam", "Spam");
             logoutPage.CommonExit();

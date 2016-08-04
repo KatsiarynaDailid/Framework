@@ -18,7 +18,7 @@ namespace Framework.Tests
             IpHandler hand = new IpHandler();
            
            LoginPageSteps loginPage = new LoginPageSteps();
-            loginPage.LogIn();
+      //      loginPage.LogIn();
             loginPage.Authorize("user1.tat13@gmail.com", "257646667");
 
             MailBoxPageSteps mailPage = new MailBoxPageSteps();
@@ -54,7 +54,7 @@ namespace Framework.Tests
             ForwardPageSteps forwardPage = new ForwardPageSteps();
             FormOfForwardPageSteps formPage = new FormOfForwardPageSteps();
 
-            loginPage.LogIn();
+       //     loginPage.LogIn();
             loginPage.Authorize("user2.tat13@gmail.com", "257646667");
 
             mainPage.GoToSettings();
@@ -123,7 +123,7 @@ namespace Framework.Tests
             MailBoxPageSteps mess = new MailBoxPageSteps();
             ErrorSteps errPage = new ErrorSteps();
 
-            loginPage.LogIn();
+       //     loginPage.LogIn();
             loginPage.Authorize("user1.tat13@gmail.com", "257646667");
             mess.WriteMessageWithAttach("user2.tat13@gmail.com", "With attach", "attach", @"C:\Users\Katsiaryna_Dailid\Downloads\001_1.zip");         
             Assert.True(errPage.ThereIsAnErrorMessage());
@@ -144,7 +144,7 @@ namespace Framework.Tests
             ThemesPageSteps themePage = new ThemesPageSteps();
             SettingPageSteps settPage = new SettingPageSteps();
 
-            loginPage.LogIn();
+        //    loginPage.LogIn();
             loginPage.Authorize("user1.tat13@gmail.com", "257646667");
             mainPage.GoToSettings();
             settPage.GoToThemesPage();
@@ -169,7 +169,7 @@ namespace Framework.Tests
             MailBoxPageSteps mailPage = new MailBoxPageSteps();
             LetterPageSteps letterPage = new LetterPageSteps();
 
-            loginPage.LogIn();
+   //         loginPage.LogIn();
             loginPage.Authorize("user3.tat13@gmail.com", "257646667");
             mailPage.AddEmoticons("user2.tat13@gmail.com", "emoticons", "Hi!");
             logoutPage.CommonExit();
@@ -181,7 +181,7 @@ namespace Framework.Tests
 
 
 
-          [Ignore("dd")]
+        [Ignore("dd")]
         [Test]
         [STAThreadAttribute]
         public void CheckStarredAndNotStarredFunction()
@@ -193,7 +193,7 @@ namespace Framework.Tests
             StarredPageSteps starredPage = new StarredPageSteps();
 
 
-            loginPage.LogIn();
+    //        loginPage.LogIn();
             loginPage.Authorize("user2.tat13@gmail.com", "257646667");
             mailPage.WriteMessage("user3.tat13@gmail.com", "For starred", "XO");
             logoutPage.CommonExit();
@@ -205,7 +205,7 @@ namespace Framework.Tests
             logoutPage.CommonExit();
         }
 
-           [Ignore("dd")]
+        [Ignore("dd")]
         [Test]
         public void CheckAddToSpamAndDeleteFromSpamFunctions()
         {
@@ -216,7 +216,7 @@ namespace Framework.Tests
             SpamPageSteps spamPage = new SpamPageSteps();
 
 
-            loginPage.LogIn();
+      //      loginPage.LogIn();
             loginPage.Authorize("user1.tat13@gmail.com", "257646667");
             mailPage.WriteMessage("user2.tat13@gmail.com", "for spam", "Spam");
             logoutPage.CommonExit();

@@ -19,6 +19,7 @@ namespace Framework.Steps
         {
             Thread.Sleep(2000);
             mainPage.btAccount.Click();
+            Thread.Sleep(2000);
             mainPage.btLogout.Click();
             Thread.Sleep(2000);
             try

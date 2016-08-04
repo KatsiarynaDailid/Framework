@@ -25,7 +25,7 @@ namespace Core.Driver
     public class Driver
     {
 
-        private static IWebDriver driverInstance = CreationOfDriver.CreateDriver();
+        private static IWebDriver driverInstance = null;//CreationOfDriver.CreateDriver();
 
         private Driver()
         {
@@ -37,15 +37,15 @@ namespace Core.Driver
         }
 
 
-        
+        public static void Close()
+        {
+            driverInstance.Close();
+        }
 
-        //public static void Close()
-        //{
-        //    if (driverInstance != null)
-        //    {
-        //        driverInstance.Quit();
-        //        driverInstance = null;
-        //    }
-        //}
+        public static void CreateWebDriver()
+        {
+            driverInstance = CreationOfDriver.CreateDriver();
+        }
+
     }
 }

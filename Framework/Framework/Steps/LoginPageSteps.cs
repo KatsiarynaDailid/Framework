@@ -14,9 +14,19 @@ namespace Framework.Steps
 
         LoginPage loginPage = new LoginPage(START_PAGE);
 
-        public void LogIn()
-        {           
-            loginPage.OpenPage();
+        public void Open()
+        {
+            loginPage.OpenDriver();
+        }
+
+        public void Close()
+        {
+            loginPage.CloseDriver();
+        }
+
+        public void OpenPage()
+        {
+
         }
 
         public void Authorize(string email, string pass)

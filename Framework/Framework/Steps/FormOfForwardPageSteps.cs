@@ -14,9 +14,9 @@ namespace Framework.Steps
         FormOfForwardPage formPage = new FormOfForwardPage();
 
         public void ConfirmForward(string form)
-        {         
+        {
             //Thread.Sleep(4000);
-           
+            bool exist;
             formPage.txtFrom.SetText(form);
             formPage.cbHasAttachment.Check();
             formPage.btCreateFilter.Click();

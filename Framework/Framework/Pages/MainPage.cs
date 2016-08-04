@@ -22,6 +22,14 @@ namespace Framework.Pages
             }
         }
 
+        public CheckBox cbAllLetters
+        {
+            get
+            {
+                return new CheckBox(By.XPath("//div[@class='J-J5-Ji J-JN-M-I-Jm']/span/div[@role='presentation']"));
+            }
+        }
+
         public Button btSpam
         {
             get
@@ -128,6 +136,15 @@ namespace Framework.Pages
             }
         }
 
+        public Button btToBin
+        {
+            get
+            {
+                return new Button(By.XPath("//div[@class='asa']/div[@class='ar9 T-I-J3 J-J5-Ji']"));
+            }
+        }
+
+       
 
         public Button btAccount
         {
@@ -141,7 +158,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//a[@class='gb_Fa gb_De gb_Le gb_rb']"));
+                return new Button(By.XPath("//a[@class='gb_Fa gb_Ce gb_Ke gb_rb']"));
             }
         }
 
@@ -168,6 +185,15 @@ namespace Framework.Pages
                 return new Button(By.XPath("//div[@class='aio UKr6le']/span/a[@title='Starred']"));
             }
         }
+
+       public LetterPannel lpLetters
+        {
+            get
+            {
+                return new LetterPannel(By.XPath("//div[@class='Cp']/div/table/tbody/tr"));
+            }
+        }
+
 
         public MainPage() : base()
         { }

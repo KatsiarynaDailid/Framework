@@ -12,17 +12,20 @@ namespace Framework.Steps
     public class MainPageSteps
     {
 
-        
+
         MainPage mainPage = new MainPage();
+        BinPage binPage = new BinPage();
         public const string SETTING_PAGE = "https://mail.google.com/mail/u/0/#settings/general";
         public const string THEMES_PAGE = "https://hangouts.google.com/webchat/u/0/host-js?prop=gmail&b=1&zx=tb8xwalepfin";
+
         public void OpenLetter()
-        {          
+        {
             mainPage.btOpenLetter.Click();
         }
 
         public void AddToSpam()
         {
+            bool exist;
             mainPage.cbLetter.Check();
             mainPage.btSpam.Click();
         }
@@ -50,7 +53,7 @@ namespace Framework.Steps
             settingsPage.OpenPage();
         }
 
-        
+
 
         public bool CheckUserInInbox()
         {
@@ -68,14 +71,14 @@ namespace Framework.Steps
             catch (Exception ex)
             {
                 return false;
-            }           
+            }
         }
 
         public void GoToStarred()
         {
             mainPage.btListOfStarred.Click();
         }
-       
+
         public bool CheckIfItIsStarred()
         {
             mainPage.btNotStarred.Click();
@@ -86,6 +89,48 @@ namespace Framework.Steps
         {
             Thread.Sleep(4000);
             return topic.Equals(mainPage.spTopic.GetText());
+        }
+
+
+
+        public bool ThereIsALetters()
+        {
+            try
+            {
+                mainPage.lpLetters.Display();
+                return true;
+
+            }
+            catch (Exception ex) { return false; }
+        }
+
+        public void CleanUpAllLettersAfterTest()
+        {
+            bool exist = true;
+
+            GoToSpam();      
+            mainPage.cbAllLetters.Check();
+
+            if (ThereIsALetters())
+            {
+                mainPage.btToBin.Click();
+            }
+
+            mainPage.btInbox.Click();
+            Thread.Sleep(4000);         
+            mainPage.cbAllLetters.Check();
+            if (ThereIsALetters())
+            {
+                mainPage.btToBin.Click();
+            }
+            GoToBin();
+
+            mainPage.cbAllLetters.Check();
+            if (ThereIsALetters())
+            {
+                binPage.btDeleteForever.Click();
+            }
+
         }
 
     }

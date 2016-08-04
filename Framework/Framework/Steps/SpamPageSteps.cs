@@ -23,6 +23,7 @@ namespace Framework.Steps
 
         public void DeleteFromSpam()
         {
+            bool exist;
             Thread.Sleep(2000);
             mainPage.cbLetter.Check();
             spamPage.btNotSpam.Click();
