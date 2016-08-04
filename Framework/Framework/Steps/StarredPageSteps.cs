@@ -11,7 +11,7 @@ namespace Framework.Steps
    public class StarredPageSteps
     {
 
-        StarredPage starredPage = new StarredPage();
+        MainPage starredPage = new MainPage();
 
         public bool CheckIfItIsStarredPage(string url)
         {

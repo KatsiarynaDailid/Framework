@@ -20,7 +20,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.Id("account-chooser-link"));
+                return new Button(By.Id("account-chooser-link"),"Change Account");
             }
         }
 
@@ -28,7 +28,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.Id("account-chooser-add-account"));
+                return new Button(By.Id("account-chooser-add-account"),"Add Account");
             }
         }
 

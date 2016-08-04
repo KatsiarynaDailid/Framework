@@ -106,7 +106,7 @@ namespace Framework.Steps
 
         public void CleanUpAllLettersAfterTest()
         {
-            bool exist = true;
+           
 
             GoToSpam();      
             mainPage.cbAllLetters.Check();

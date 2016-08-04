@@ -18,7 +18,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new CheckBox(By.XPath("//tr[@class='zA zE'][1]/td[2]/div/div"));
+                return new CheckBox(By.XPath("//tr[@class='zA zE'][1]/td[2]/div/div"), "First Letter");
             }
         }
 
@@ -26,7 +26,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new CheckBox(By.XPath("//div[@class='J-J5-Ji J-JN-M-I-Jm']/span/div[@role='presentation']"));
+                return new CheckBox(By.XPath("//div[@class='J-J5-Ji J-JN-M-I-Jm']/span/div[@role='presentation']"), "All Letters");
             }
         }
 
@@ -34,7 +34,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@class='asl T-I-J3 J-J5-Ji']"));
+                return new Button(By.XPath("//div[@class='asl T-I-J3 J-J5-Ji']"), "Add to Spam");
             }
         }
 
@@ -42,7 +42,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@class='T-I J-J5-Ji T-I-KE L3']"));
+                return new Button(By.XPath("//div[@class='T-I J-J5-Ji T-I-KE L3']"), "Write");
             }
         }
 
@@ -50,7 +50,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//span[@class='CJ']"));
+                return new Button(By.XPath("//span[@class='CJ']"), "More");
             }
         }
 
@@ -58,7 +58,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[3]/div/div/div/div[4]/div/div/div"));
+                return new Button(By.XPath("//div[3]/div/div/div/div[4]/div/div/div"), "Spam Letters");
             }
         }
 
@@ -66,7 +66,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@class='Cr aqJ']/div[@class='G-Ni J-J5-Ji']/div"));
+                return new Button(By.XPath("//div[@class='Cr aqJ']/div[@class='G-Ni J-J5-Ji']/div"), "Settings");
             }
         }
 
@@ -74,7 +74,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@class='J-N aMS']"));
+                return new Button(By.XPath("//div[@class='J-N aMS']"), "Lower Settings");
             }
         }
 
@@ -82,7 +82,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath(""));
+                return new Button(By.XPath(""), "Themes");
             }
         }
 
@@ -90,7 +90,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//td[6]/div/div/div/span"));
+                return new Button(By.XPath("//td[6]/div/div/div/span"), "Open Letter");
             }
         }
 
@@ -98,7 +98,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Span(By.XPath("//div[@class='yW']/span[@name='User First']"));
+                return new Span(By.XPath("//div[@class='yW']/span[@name='User First']"), "Form From Inbox");
             }
         }
 
@@ -106,7 +106,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//a[contains(text(),'Inbox')]"));
+                return new Button(By.XPath("//a[contains(text(),'Inbox')]"), "Inbox");
             }
         }
 
@@ -114,7 +114,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@aria-label='Important because you marked it as important.']"));
+                return new Button(By.XPath("//div[@aria-label='Important because you marked it as important.']"), "Label Important");
             }
         }
         //html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div/div[4]/div[1]/div/table/tbody/tr/td[6]/div/div/div/span[1]/b
@@ -123,7 +123,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Span(By.XPath("//td/div/div/div/span[1]"));
+                return new Span(By.XPath("//td/div/div/div/span[1]"),"Topic");
             }
         }
 
@@ -132,7 +132,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[3]/div/div/div/div[5]/div/div/div"));
+                return new Button(By.XPath("//div[3]/div/div/div/div[5]/div/div/div"), "Bin");
             }
         }
 
@@ -140,7 +140,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@class='asa']/div[@class='ar9 T-I-J3 J-J5-Ji']"));
+                return new Button(By.XPath("//div[@class='asa']/div[@class='ar9 T-I-J3 J-J5-Ji']"), "To Bin");
             }
         }
 
@@ -150,7 +150,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//a[@class='gb_b gb_8a gb_R']/span[@class='gb_3a gbii']"));
+                return new Button(By.XPath("//a[@class='gb_b gb_8a gb_R']/span[@class='gb_3a gbii']"), "Account");
             }
         }
 
@@ -158,7 +158,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//a[@class='gb_Fa gb_Ce gb_Ke gb_rb']"));
+                return new Button(By.XPath("//a[@class='gb_Fa gb_Ce gb_Ke gb_rb']"), "Logout");
             }
         }
 
@@ -166,14 +166,14 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//td[@class='apU xY']/span[@aria-label='Starred']"));
+                return new Button(By.XPath("//td[@class='apU xY']/span[@aria-label='Starred']"), "Starred");
             }
         }
         public Button btNotStarred
         {
             get
             {
-                return new Button(By.XPath("//td[@class='apU xY']/span[@aria-label='Not starred']"));
+                return new Button(By.XPath("//td[@class='apU xY']/span[@aria-label='Not starred']"), "Not Starred");
             }
         }
 
@@ -182,7 +182,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@class='aio UKr6le']/span/a[@title='Starred']"));
+                return new Button(By.XPath("//div[@class='aio UKr6le']/span/a[@title='Starred']"), "List Of Starred");
             }
         }
 
@@ -190,9 +190,18 @@ namespace Framework.Pages
         {
             get
             {
-                return new LetterPannel(By.XPath("//div[@class='Cp']/div/table/tbody/tr"));
+                return new LetterPannel(By.XPath("//div[@class='Cp']/div/table/tbody/tr"), "Letters");
             }
         }
+
+        //public Span spTopic
+        //{
+        //    get
+        //    {
+        //        return new Span(By.XPath("html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div/div[4]/div[1]/div/table/tbody/tr/td[6]/div/div/div/span[1]/b"), "Topic");
+        //    }
+        //}
+
 
 
         public MainPage() : base()

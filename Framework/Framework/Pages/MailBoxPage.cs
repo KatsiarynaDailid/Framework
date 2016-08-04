@@ -18,7 +18,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new TextArea(By.Name("to"));
+                return new TextArea(By.Name("to"), "To");
             }
         }
 
@@ -26,7 +26,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new TextArea(By.Name("subjectbox"));
+                return new TextArea(By.Name("subjectbox"), "Topic");
             }
         }
 
@@ -34,7 +34,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new TextArea(By.XPath("//div[@aria-label='Message Body']"));
+                return new TextArea(By.XPath("//div[@aria-label='Message Body']"), "Message Body");
             }
         }
 
@@ -42,7 +42,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//td[4]/div/div/div/div/div"));
+                return new Button(By.XPath("//td[4]/div/div/div/div/div"), "Attach");
             }
         }
 
@@ -50,7 +50,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@aria-label='Send ‪(Ctrl-Enter)‬']"));
+                return new Button(By.XPath("//div[@aria-label='Send ‪(Ctrl-Enter)‬']"), "Send");
             }
         }
 
@@ -59,7 +59,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@class='QT aaA aMZ']"));
+                return new Button(By.XPath("//div[@class='QT aaA aMZ']"), "Open Emoticons");
             }
         }
         //div[@class='wVboN']/button[@string='1f601']
@@ -69,7 +69,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//button[@title='Show face emoticons']"));
+                return new Button(By.XPath("//button[@title='Show face emoticons']"), "All Emoticons");
             }
         }
 
@@ -77,7 +77,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@class='wVboN']/button[@string='1f601']"));
+                return new Button(By.XPath("//div[@class='wVboN']/button[@string='1f601']"), "First Emoticons");
             }
         }
 
@@ -85,7 +85,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@class='wVboN']/button[@string='1f60a']"));
+                return new Button(By.XPath("//div[@class='wVboN']/button[@string='1f60a']"), "Second Emoticons");
             }
         }
 

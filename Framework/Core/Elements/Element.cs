@@ -15,9 +15,18 @@ namespace Core
 
         private By by { get; set; }
 
+        public string NameField { get; set; }
+
         public Element(By by)
         {
             this.by = by;
+        }
+
+
+        public Element(By by, string name)
+        {
+            this.by = by;
+            this.NameField = name;
         }
 
         public IWebElement WrappedElement

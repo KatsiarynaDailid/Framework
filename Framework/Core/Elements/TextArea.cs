@@ -1,4 +1,5 @@
 ﻿using Core.Extensions;
+using Core.Log;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,14 @@ namespace Core.Elements
         public TextArea(By by) : base(by)
         { }
 
+        public TextArea(By by, string name) : base(by)
+        { }
+
         public void SetText(String str)
         {
+            
             this.WrappedElement.SendKeys(str);
+            logHandler.LogToFile($"Set text \"{str}\" to: {NameField}.");
         }
 
     }

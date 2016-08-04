@@ -19,7 +19,7 @@ namespace Framework.Pages
             /*//div[@class='xT']/div[@class='y6']/span[1]/b*/
             get
             {
-                return new Button(By.XPath("//div[contains(text(),'Not spam')]"));
+                return new Button(By.XPath("//div[contains(text(),'Not spam')]"), "Not Spam");
             }
         }
 
@@ -29,7 +29,7 @@ namespace Framework.Pages
             /*//div[@class='xT']/div[@class='y6']/span[1]/b*/
             get
             {
-                return new Span(By.XPath("html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div/div[4]/div[1]/div/table/tbody/tr/td[6]/div/div/div/span[1]/b"));
+                return new Span(By.XPath("html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div/div[4]/div[1]/div/table/tbody/tr/td[6]/div/div/div/span[1]/b"), "Topic");
             }
         }
 

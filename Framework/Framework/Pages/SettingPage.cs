@@ -15,7 +15,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//a[contains(text(),'Forwarding and POP/IMAP')]"));
+                return new Button(By.XPath("//a[contains(text(),'Forwarding and POP/IMAP')]"), "Forward");
             }
         }
 
@@ -23,7 +23,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//a[contains(text(),'Themes')]"));
+                return new Button(By.XPath("//a[contains(text(),'Themes')]"), "Themes");
             }
         }
 

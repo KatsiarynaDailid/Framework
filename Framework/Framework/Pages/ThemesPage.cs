@@ -24,7 +24,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Link(By.XPath("//a[contains(text(),'Set Theme.')]"));
+                return new Link(By.XPath("//a[contains(text(),'Set Theme.')]"), "Set Theme");
             }
         }
 
@@ -32,7 +32,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[contains(text(),'My Photos')]"));
+                return new Button(By.XPath("//div[contains(text(),'My Photos')]"), "My Photos");
             }
         }
 
@@ -41,7 +41,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@class='a-ki']/div[contains(text(),'Upload a photo')]"));
+                return new Button(By.XPath("//div[@class='a-ki']/div[contains(text(),'Upload a photo')]"), "Upload a photo");
             }
         }
 
@@ -50,7 +50,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[contains(text(),'Select a photo from your computer')]"));
+                return new Button(By.XPath("//div[contains(text(),'Select a photo from your computer')]"), "Select Photo");
             }
         }
 
@@ -58,7 +58,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Span(By.XPath("//div[contains(text(),'Selected file [001_1.zip] is not supported for upload.')]"));
+                return new Span(By.XPath("//div[contains(text(),'Selected file [001_1.zip] is not supported for upload.')]"), "Error of Extension");
             }
         }
 
@@ -66,7 +66,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@aria-label='Close']"));
+                return new Button(By.XPath("//div[@aria-label='Close']"), "Close Upload Window");
             }
         }
 
@@ -74,7 +74,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@class='Kj-JD-K7 Kj-JD-K7-GIHV4 a80']/span[@aria-label='Close']"));
+                return new Button(By.XPath("//div[@class='Kj-JD-K7 Kj-JD-K7-GIHV4 a80']/span[@aria-label='Close']"), "Close Themes Window");
             }
         }
         public void SwitchFrame()

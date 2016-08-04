@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Core.Log;
 using System.Threading.Tasks;
 
 namespace Core.Elements
@@ -15,18 +16,15 @@ namespace Core.Elements
         public CheckBox(By by) : base(by)
         { }
 
-        public void Check(/*out bool exist */)
-        {
-            //try
-            //{
-            //    exist = true
-            
-                this.WrappedElement.Click();
-                
 
-            //}
-            //catch (Exception ex) { exist = false; }
-            }
+        public CheckBox(By by, string name) : base(by)
+        { }
+
+        public void Check()
+        {       
+            this.WrappedElement.Click();
+            logHandler.LogToFile($"'{NameField}' checked.");
+        }
 
     }
 }

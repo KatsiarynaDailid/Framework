@@ -17,56 +17,56 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//input[@value='Add a forwarding address']"));
+                return new Button(By.XPath("//input[@value='Add a forwarding address']"), "Add Forward");
             }
         }
         public TextArea txtAddress
         {
             get
             {
-                return new TextArea(By.XPath("//*[@class='PN']/input"));
+                return new TextArea(By.XPath("//*[@class='PN']/input"), "Address");
             }
         }
         public Button btNext
         {
             get
             {
-                return new Button(By.XPath("//button[@name='next']"));
+                return new Button(By.XPath("//button[@name='next']"), "Next");
             }
         }
         public Button btProceed
         {
             get
             {
-                return new Button(By.XPath("//input[@value='Proceed']"));
+                return new Button(By.XPath("//input[@value='Proceed']"), "Proceed");
             }
         }
         public Button btOk
         {
             get
             {
-                return new Button(By.Name("ok"));
+                return new Button(By.Name("ok"), "Ok");
             }
         }
         public RadioButton rbForward
         {
             get
             {
-                return new RadioButton(By.XPath("//span[contains(.,'Forward a copy of incoming mail to')]/../preceding-sibling::td/input"));
+                return new RadioButton(By.XPath("//span[contains(.,'Forward a copy of incoming mail to')]/../preceding-sibling::td/input"), "Forward");
             }
         }
         public Button btFilter
         {
             get
             {
-                return new Button(By.XPath("//div[6]/div/table/tbody/tr/td[2]/div/div[3]/span"));
+                return new Button(By.XPath("//div[6]/div/table/tbody/tr/td[2]/div/div[3]/span"), "Filter");
             }
         }
         public Button btSaveChange
         {
             get
             {
-                return new Button(By.XPath("/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div/div/div/div/div/div[6]/div/table/tbody/tr[4]/td/div/button[1]"));
+                return new Button(By.XPath("/html/body/div[7]/div[3]/div/div[2]/div[1]/div[2]/div/div/div/div[2]/div[1]/div[1]/div/div/div/div/div/div/div[6]/div/table/tbody/tr[4]/td/div/button[1]"), "Save Change");
             }
         }
 
@@ -75,7 +75,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//td[@class='C6']/span/select"));
+                return new Button(By.XPath("//td[@class='C6']/span/select"), "Options");
             }
         }
 
@@ -83,7 +83,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//td[@class='C6']/span/select/option[@value='2']"));
+                return new Button(By.XPath("//td[@class='C6']/span/select/option[@value='2']"), "Remove");
             }
         }
 
@@ -92,7 +92,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.Name("ok"));
+                return new Button(By.Name("ok"), "Ok remove");
             }
         }
         public ForwardPage() : base()

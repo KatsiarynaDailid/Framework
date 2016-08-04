@@ -1,5 +1,6 @@
 ﻿using Core.Extensions;
 using OpenQA.Selenium;
+using Core.Log;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,15 @@ namespace Core.Elements
         public Span(By by) : base(by)
         { }
 
+        public Span(By by, string name) : base(by)
+        { }
 
         public string GetText()
         {
-           return this.WrappedElement.Text;
+            string result = this.WrappedElement.Text;
+            logHandler.LogToFile($"Got text '{result}' from '{NameField}'.");
+            return result;
+            
         }
 
     }

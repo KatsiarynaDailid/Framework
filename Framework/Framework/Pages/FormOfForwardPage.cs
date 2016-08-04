@@ -16,7 +16,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new TextArea(By.XPath("//span[2]/input"));
+                return new TextArea(By.XPath("//span[2]/input"), "From");
             }
         }
 
@@ -24,7 +24,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new   CheckBox(By.XPath("//div[7]/span/input"));
+                return new   CheckBox(By.XPath("//div[7]/span/input"), "Has Attachment");
             }
         }
 
@@ -32,7 +32,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.Name("ok"));
+                return new Button(By.Name("ok"), "Ok");
             }
         }
 
@@ -40,7 +40,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[9]/div[2]"));
+                return new Button(By.XPath("//div[9]/div[2]"), "Create Filter");
             }
 
         }
@@ -49,7 +49,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new CheckBox(By.XPath("//div[6]/input"));
+                return new CheckBox(By.XPath("//div[6]/input"), "Delete It");
             }
         }
 
@@ -57,7 +57,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new CheckBox(By.XPath("//div[8]/input"));
+                return new CheckBox(By.XPath("//div[8]/input"), "Always Mark");
             }   
         }
 
@@ -65,7 +65,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[contains(text(),'Create filter')]"));
+                return new Button(By.XPath("//div[contains(text(),'Create filter')]"), "Finish Creation");
             }
            
         }

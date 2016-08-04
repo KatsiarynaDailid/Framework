@@ -17,7 +17,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//a[4]"));
+                return new Button(By.XPath("//a[4]"), "Link in Letter");
             }
         }
 
@@ -27,7 +27,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//img[@data-goomoji='1f601']"));
+                return new Button(By.XPath("//img[@data-goomoji='1f601']"), "First Emoticon In Letter");
             }
         }
 
@@ -35,7 +35,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//img[@data-goomoji='1f60a']"));
+                return new Button(By.XPath("//img[@data-goomoji='1f60a']"), "Second Emoticon In Letter");
             }
         }
 
@@ -43,7 +43,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//input[@value='Confirm']"));
+                return new Button(By.XPath("//input[@value='Confirm']"), "Confirm");
             }
         }
 

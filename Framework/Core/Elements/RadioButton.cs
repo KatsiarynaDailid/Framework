@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using Core.Log;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,12 @@ namespace Core.Elements
         public RadioButton(By by) : base(by)
         { }
 
+        public RadioButton(By by, string name) : base(by)
+        { }
         public void Click()
-        {
+        {          
             this.WrappedElement.Click();
+            logHandler.LogToFile($"'{NameField}' clicked.");
         }
 
 

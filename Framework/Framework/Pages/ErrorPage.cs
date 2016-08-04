@@ -18,7 +18,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Span(By.XPath("//div[@class='bab']"));
+                return new Span(By.XPath("//div[@class='bab']"), "Error Window");
             }
         }
 
@@ -26,7 +26,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.XPath("//div[@class='Kj-JD-K7 Kj-JD-K7-GIHV4']/span[@aria-label='Close']"));
+                return new Button(By.XPath("//div[@class='Kj-JD-K7 Kj-JD-K7-GIHV4']/span[@aria-label='Close']"), "Close Error Window");
             }
         }
 

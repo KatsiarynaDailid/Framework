@@ -67,7 +67,6 @@
     <Compile Include="Pages\MainPage.cs" />
     <Compile Include="Pages\SettingPage.cs" />
     <Compile Include="Pages\SpamPage.cs" />
-    <Compile Include="Pages\StarredPage.cs" />
     <Compile Include="Pages\ThemesPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\BinPageSteps.cs" />

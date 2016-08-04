@@ -16,7 +16,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.Id("next"));
+                return new Button(By.Id("next"), "Next");
             }
         }
 
@@ -24,7 +24,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new TextArea(By.Id("Email"));
+                return new TextArea(By.Id("Email"),"Email");
             }
         }
 
@@ -32,7 +32,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new Button(By.Id("signIn"));
+                return new Button(By.Id("signIn"),"SignIn");
             }
         }
 
@@ -40,7 +40,7 @@ namespace Framework.Pages
         {
             get
             {
-                return new TextArea(By.Id("Passwd"));
+                return new TextArea(By.Id("Passwd"), "Password");
             }
         }
 

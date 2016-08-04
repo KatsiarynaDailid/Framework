@@ -15,10 +15,15 @@ namespace Core.Elements
         public Button(By by) : base(by)
         { }
 
+
+        public Button(By by, string name) : base(by)
+        { }
+
         public void Click()
         {
-           logHandler.LogToFile("Click!");
+            
             this.WrappedElement.Click();
+            logHandler.LogToFile($"'{NameField}' clicked.");
         }
     }
 }
